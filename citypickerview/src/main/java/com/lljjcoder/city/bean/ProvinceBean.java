@@ -1,4 +1,4 @@
-package com.lljjcoder.city_20170724.bean;
+package com.lljjcoder.city.bean;
 
 import java.util.ArrayList;
 

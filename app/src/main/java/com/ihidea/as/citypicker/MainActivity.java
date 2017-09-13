@@ -9,10 +9,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.lljjcoder.city_20170724.CityPickerView;
-import com.lljjcoder.city_20170724.bean.CityBean;
-import com.lljjcoder.city_20170724.bean.DistrictBean;
-import com.lljjcoder.city_20170724.bean.ProvinceBean;
+import com.lljjcoder.city.CityPickerView;
+import com.lljjcoder.city.bean.CityBean;
+import com.lljjcoder.city.bean.DistrictBean;
+import com.lljjcoder.city.bean.ProvinceBean;
 import com.lljjcoder.citylist.CityListSelectActivity;
 import com.lljjcoder.citylist.bean.CityInfoBean;
 
@@ -49,7 +49,8 @@ public class MainActivity extends AppCompatActivity {
         goWheel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CityPickerView cityPicker = new CityPickerView.Builder(MainActivity.this).textSize(20)
+                CityPickerView cityPicker = new CityPickerView.Builder(MainActivity.this)
+                        .textSize(20)
                         .titleTextColor("#000000")
                         .backgroundPop(0xa0000000)
                         .province("江苏省")

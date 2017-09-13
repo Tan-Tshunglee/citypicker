@@ -16,13 +16,17 @@
 package com.lljjcoder.citypickerview.widget.wheel.adapters;
 
 import android.content.Context;
+import android.view.Gravity;
 
 /**
  * The simple Array wheel adapter
  * @param <T> the element type
  */
 public class ArrayWheelAdapter<T> extends AbstractWheelTextAdapter {
-    
+
+    public static final int GRAVITY_LEFT = Gravity.LEFT | Gravity.CENTER_VERTICAL;
+    public static final int GRAVITY_RIGHT = Gravity.RIGHT | Gravity.CENTER_VERTICAL;
+
     // items
     private T items[];
 
@@ -31,11 +35,20 @@ public class ArrayWheelAdapter<T> extends AbstractWheelTextAdapter {
      * @param context the current context
      * @param items the items
      */
-    public ArrayWheelAdapter(Context context, T items[]) {
+    public ArrayWheelAdapter(Context context, T items[], int textGravity) {
         super(context);
         
         //setEmptyItemResource(TEXT_VIEW_ITEM_RESOURCE);
         this.items = items;
+        this.textGravity = textGravity;
+    }
+
+    public ArrayWheelAdapter(Context context, T items[]) {
+        super(context);
+
+        //setEmptyItemResource(TEXT_VIEW_ITEM_RESOURCE);
+        this.items = items;
+        this.textGravity = Gravity.CENTER;
     }
     
     @Override

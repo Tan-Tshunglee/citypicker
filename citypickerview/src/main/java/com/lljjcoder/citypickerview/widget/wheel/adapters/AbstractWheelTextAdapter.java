@@ -64,7 +64,8 @@ public abstract class AbstractWheelTextAdapter extends AbstractWheelAdapter {
     
     // Empty items resources
     protected int emptyItemResourceId;
-    
+
+    protected int textGravity = Gravity.CENTER;
     /**
      * Constructor
      * @param context the current context
@@ -236,7 +237,7 @@ public abstract class AbstractWheelTextAdapter extends AbstractWheelAdapter {
      */
     protected void configureTextView(TextView view) {
         view.setTextColor(textColor);
-        view.setGravity(Gravity.CENTER);
+        view.setGravity(textGravity);
         view.setPadding(0, padding, 0, padding);
         view.setTextSize(textSize);
         view.setEllipsize(TextUtils.TruncateAt.END);

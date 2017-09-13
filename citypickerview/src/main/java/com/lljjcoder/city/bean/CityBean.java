@@ -1,4 +1,6 @@
-package com.lljjcoder.city_20170724.bean;
+package com.lljjcoder.city.bean;
+
+import java.util.ArrayList;
 
 /**
  * @2Do:
@@ -6,7 +8,8 @@ package com.lljjcoder.city_20170724.bean;
  * @Version v ${VERSION}
  * @Date 2017/7/7 0007.
  */
-public class DistrictBean  {
+public class CityBean  {
+    
 
     private String id; /*110101*/
     
@@ -23,6 +26,8 @@ public class DistrictBean  {
     private Double gisBd09Lng; /*116.422*/
     
     private String zipcode;
+    
+    private ArrayList<DistrictBean> cityList;
     
     public String getId() {
         return id == null ? "" : id;
@@ -87,6 +92,15 @@ public class DistrictBean  {
     public void setZipcode(String zipcode) {
         this.zipcode = zipcode;
     }
+    
+    public ArrayList<DistrictBean> getCityList() {
+        return cityList;
+    }
+    
+    public void setCityList(ArrayList<DistrictBean> cityList) {
+        this.cityList = cityList;
+    }
+
 
     @Override
     public String toString() {
